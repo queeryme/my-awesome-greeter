@@ -1,7 +1,8 @@
 {
     "name": "@flatxph/my-awesome-greeter",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "repository": "git@github.com:queeryme/my-awesome-greeter.git",
     "author": "Rodney Pantonial <rodney.pantonial@gmail.com>",
     "license": "MIT",
