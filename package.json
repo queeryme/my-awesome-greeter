@@ -1,0 +1,31 @@
+{
+    "name": "my-awesome-greeter",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:queeryme/my-awesome-greeter.git",
+    "author": "Rodney Pantonial <rodney.pantonial@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^23.3.12",
+        "jest": "^23.6.0",
+        "prettier": "^1.15.3",
+        "ts-jest": "^23.10.5",
+        "tslint": "^5.12.1",
+        "tslint-config-prettier": "^1.17.0",
+        "typescript": "^3.2.2"
+    },
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "test": "jest --config jestconfig.json",
+        "prepare": "yarn run build",
+        "prePublishOnly": "yarn test && yarn run lint",
+        "preversion": "yarn run lint",
+        "version": "yarn run format && git add -A src",
+        "postVersion": "git push && git push --tags"
+    },
+    "files": [
+        "lib/**/*"
+    ]
+}
